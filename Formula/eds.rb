@@ -18,6 +18,10 @@ class Eds < Formula
     end
   end
 
+  # Required for `eds inspect extract-mesh` — manages the ifcopenshell
+  # Python environment automatically via PEP 723 inline script metadata.
+  depends_on "uv"
+
   def install
     bin.install "eds"
   end
