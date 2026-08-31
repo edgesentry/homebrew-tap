@@ -19,7 +19,7 @@ class Ontographia < Formula
   end
 
   def install
-    binary = buildpath.glob("ontographia-*/ontographia").first
+    binary = [buildpath / "ontographia", *buildpath.glob("ontographia-*/ontographia")].find(&:exist?)
     odie "Expected ontographia binary in release archive" if binary.nil?
 
     bin.install binary
