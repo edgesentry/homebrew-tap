@@ -19,8 +19,10 @@ class Ontographia < Formula
   end
 
   def install
-    platform_dir = Dir["ontographia-*"].first
-    bin.install "#{platform_dir}/ontographia"
+    binary = buildpath.glob("ontographia-*/ontographia").first
+    odie "Expected ontographia binary in release archive" if binary.nil?
+
+    bin.install binary
   end
 
   test do
