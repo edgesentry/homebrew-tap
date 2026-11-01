@@ -9,15 +9,18 @@ brew tap edgesentry/tap
 | Formula | Description |
 |---------|-------------|
 | [`eds`](Formula/eds.rb) | EdgeSentry audit / IFC inspection CLI ([edgesentry-rs](https://github.com/edgesentry/edgesentry-rs)) |
-| [`ontographia`](Formula/ontographia.rb) | Ontology → Intent → Cypher 25 CLI ([ontographia](https://github.com/edgesentry/ontographia)) |
+| [`ontographia`](Formula/ontographia.rb) | Ontology → Intent → Cypher 25 CLI ([ontographia](https://github.com/edgesentry/ontographia)). Command: `otg`. |
 
 ### Install
 
 ```bash
 brew install eds
 brew install ontographia
+otg --version
 ```
+
+`brew install ontographia` installs the Rust CLI as **`otg`**.
 
 ### Supported platforms
 
-Binary formulae ship pre-built releases for **macOS Apple Silicon** and **Linux x86_64** (same matrix as GitHub Releases). Intel Mac and Linux arm64: use `cargo install ontographia-cli` or download assets from [Releases](https://github.com/edgesentry/ontographia/releases).
+Binary formulae ship pre-built releases for **macOS Apple Silicon** and **Linux x86_64**. Intel Mac and Linux arm64: use `cargo install ontographia-cli` or download assets from [Releases](https://github.com/edgesentry/ontographia/releases).
